@@ -1,0 +1,209 @@
+@charset "utf-8";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    color: #5d4037; /* こげ茶色に変更 */
+    background-color: #fdfbf7; /* クリーム色に変更 */
+    font-size: 16px;
+    font-family: "Yu Mincho", "YuMincho", serif; /* 明朝体で落ち着いた雰囲気に */
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+header {
+    height: 596px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    /* 背景画像を活かしつつ、色味を調整するためにグラデーションを重ねる */
+    background: linear-gradient(rgba(255, 248, 225, 0.6), rgba(255, 248, 225, 0.6)), url(img/header.svg) no-repeat top right/contain;
+}
+
+.links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 100px 0;
+}
+
+.links .logo {
+    font-size: 40px;
+    font-family: cursive; /* ロゴを手書き風に */
+}
+
+.links nav {
+    display: flex;
+    gap: 50px;
+}
+
+.links nav a {
+    color: #5d4037; /* ナビゲーションも見やすい茶色に */
+    font-weight: bold;
+}
+
+/*** メインコピー ***/
+.main-copy {
+    width: 100%;
+    font-size: 56px;
+    font-weight: 500;
+    text-align: center;
+    margin: 1.5em 0 0;
+    letter-spacing: .2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+/*** サブコピー ***/
+.sub-copy {
+    font-size: 24px;
+    position: absolute;
+    left: 150px;
+    bottom: 50px;
+    line-height: 1.8;
+    background: rgba(255,255,255,0.8); /* 文字が読みやすいように背景追加 */
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* ====================
+  main共通
+==================== */
+main {
+    width: 1200px;
+    margin: auto;
+}
+
+section {
+    margin: 120px auto;
+}
+
+h2 {
+    font-size: 32px;
+    margin-bottom: 1em;
+    border-bottom: 2px solid #d7ccc8; /* 下線を追加 */
+    display: inline-block;
+    padding-bottom: 10px;
+}
+
+/*** テキストエリア共通 ***/
+.text-area p {
+    font-size: 18px;
+    line-height: 2; /* 行間を広げてゆったりと */
+}
+
+/* ====================
+  .featureセクション
+==================== */
+
+.feature {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 100px;
+}
+
+.feature .text-area {
+    margin-top: 100px;
+}
+
+.features {
+    width: 680px;
+    height: 600px;
+    position: relative;
+    text-align: center;
+    color: #fff; 
+}
+
+.features div {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 360px;
+    /* 背景画像がない場合でも丸い形が見えるように背景色を追加 */
+    background-color: rgba(141, 110, 99, 0.9); 
+    border-radius: 50%; /* 完全な円に */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* 影をつけて浮き上がらせる */
+}
+
+/* 元の背景画像指定は残しつつ、CSSで上書きされる形になります */
+.center {
+    background: url(img/center.svg) center/contain no-repeat;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2; /* 真ん中を手前に */
+}
+
+.left {
+    background: url(img/left.svg) center/contain no-repeat;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(161, 136, 127, 0.9) !important; /* 少し色を変える */
+}
+
+.right {
+    background: url(img/right.svg) center/contain no-repeat;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(161, 136, 127, 0.9) !important;
+}
+
+.features h3 {
+    font-size: 22px;
+    margin-bottom: 0.5em;
+    font-family: sans-serif; /* 見出しは読みやすくゴシック体 */
+}
+
+/* ====================
+  .new-eraセクション
+==================== */
+
+.new-era {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff; /* 背景を白にして区切りを */
+    padding: 60px;
+    border-radius: 20px; /* 角丸 */
+}
+
+.new-era .text-area {
+    width: 44%;
+}
+
+.new-era img {
+    width: 45%;
+    height: auto;
+    border-radius: 50% 50% 20px 20px; /* 変形させて可愛らしく */
+    border: 10px solid #efebe9; /* 額縁のようなボーダー */
+}
+
+/* ====================
+  footer
+==================== */
+
+footer {
+    height: 200px;
+    background-color: #4e342e; /* 濃い茶色 */
+    /* 背景画像を削除または上書き */
+    background-image: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.copyright {
+    color: #efebe9;
+    font-size: 14px;
+    margin-top: 0;
+}
